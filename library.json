@@ -1,0 +1,14 @@
+{
+  "name": "ms_uart",
+  "version": "1.0.0",
+  "description": "A simple uart library",
+  "authors": [
+    {
+      "name": "Sheppard",
+      "email": ""
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "*"
+}
