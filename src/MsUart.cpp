@@ -54,7 +54,7 @@ void MsUart::print(char ch)
     transmit(ch);
 }
 
-void MsUart::printNumber(uint16_t num)
+void MsUart::print(uint16_t num)
 {
     char buffer[6]; // 5 cyfr dla wartości od 0 do 1023 + 1 dla null terminatora
     int i = 5;
@@ -67,4 +67,21 @@ void MsUart::printNumber(uint16_t num)
     } while (num > 0);
 
     print(&buffer[i]); // Wyślij string od pierwszej znaczącej cyfry
+}
+
+void MsUart::println(const char *str)
+{
+    while (*str)
+    {
+        transmit(*str++);
+    }
+    transmit('\r');
+    transmit('\n');
+}
+
+void MsUart::println(char ch)
+{
+    transmit(ch);
+    transmit('\r');
+    transmit('\n');
 }

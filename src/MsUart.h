@@ -23,7 +23,10 @@ public:
 
     void print(const char *str);
     void print(char ch);
-    void printNumber(uint16_t num);
+    void print(uint16_t num);
+
+    void println(const char *str);
+    void println(char ch);
 };
 
 #endif // MS_UART_H
